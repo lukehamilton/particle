@@ -22,7 +22,10 @@ export default Ember.Service.extend({
 
   getVariable(variableName, deviceID) {
     return this.particle.getVariable({ deviceId: deviceID, name: variableName, auth: this.token })
-  }
+  },
 
+  signalDevice(signal, deviceID)  {
+    return this.particle.signalDevice({ deviceId: deviceID, signal: signal, auth: this.token })
+  }
 
 });

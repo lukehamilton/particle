@@ -18,7 +18,7 @@ export default Ember.Route.extend({
   commands: {
 
     help: function(args) {
-        return "<p>Welcome to the <span style=\"color: #0f0; font-weight: bold\">Geekonaut</span> terminal</p>" +
+        return "<p>Welcome to the <span class='cyan'>Particle JavaScript SDK</span> terminal</p>" +
                "<p>Here is what you can do:</p>" +
                "<ul>" +
                "<li><strong>devices</strong> - lists the available devices</li>" +
@@ -27,7 +27,7 @@ export default Ember.Route.extend({
                "<li><strong>execute FUNCTION DEVICE_ID</strong> - execute a function on a device and returns a value</li>" +
                "<li><strong>variables DEVICE_ID</strong> - lists the variables a device stores</li>" +
                "<li><strong>value VARIABLE DEVICE_ID</strong> - retrieves the value of a variable stored on a device</li>" +
-               "</ul><p>Pro tip: There's a telnet listening on 2342, too. :)</p>";
+               "<li><strong>signal SIGNAL DEVICE_ID</strong> - Send a signal to the device to shout rainbows</li></ul>";
     },
 
     clear: function(args) {
@@ -141,17 +141,26 @@ export default Ember.Route.extend({
       var promise = particleService.getVariable(variableName, deviceID);
       promise.then(function(data)  {
         var terminal = document.getElementById("terminal");
-        console.log('data', data);
-        // var returnValue = data.body.return_value;
-        // var output = '<p class="cyan">' + returnValue + '</p>';
-        // terminal.innerHTML += output
+        var result = data.body.result;
+        var output = '<p class="cyan">' + result + '</p>';
+        terminal.innerHTML += output
+        resetPromptOverride();
+      })
+      return null
+    },
+
+    signal: function(args)  {
+      var signal = args[1];
+      var deviceID = args[2];
+      var promise = particleService.signalDevice(signal, deviceID);
+      promise.then(function(data)  {
+        var terminal = document.getElementById("terminal");
+        var output = '<p class="cyan">Sent signal to ' + deviceID + '</p>';
+        terminal.innerHTML += output
         resetPromptOverride();
       })
       return null
     }
-
-
-
 
   },
 

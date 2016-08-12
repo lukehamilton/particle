@@ -1,0 +1,26 @@
+
+
+<h3 class='dashboard-title'>{{#link-to 'devices'}}Devices{{/link-to}} / {{ model.id }}</h3>
+
+<section id=devices class='device-list'>
+  <div class='approved-devices'>
+
+    <table class='devices-table table-hover'>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Last Connection</th>
+        </tr>
+      </thead>
+      <tbody>
+        <td>{{model.id}}</td>
+        <td>{{ format-product-id model.product_id }}</td>
+        <td>{{model.name}}</td>
+        <td>{{model.last_heard}}</td>
+      </tbody>
+    </table>
+
+  </div>
+</section>

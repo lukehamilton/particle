@@ -21,7 +21,7 @@ var Terminal = (function() {
     };
 
     var runCommand = function(terminal, cmd, args) {
-        commands = ['devices', 'details', 'functions', 'execute', 'variables']
+        commands = ['devices', 'details', 'functions', 'execute', 'variables', 'value', 'signal']
         if (commands.indexOf(cmd) > -1) {
           self.commands[cmd](args)
         } else {
@@ -110,8 +110,8 @@ var Terminal = (function() {
             if(input[0] && input[0] in self.commands) {
                 runCommand(elem, input[0], input);
             }
-
-            // mpt(elem, prompt);
+            // window.resetPromptOverride()
+            // resetPrompt(elem, prompt);
             event.preventDefault();
         });
 
