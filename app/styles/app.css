@@ -1,0 +1,93 @@
+
+body {
+  font-family: 'Gotham SSm A','Gotham SSm B',proxima-nova,"Helvetica Neue",helvetica,arial,sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Gotham A','Gotham B',proxima-nova,"Helvetica Neue",helvetica,arial,sans-serif;
+}
+
+
+.sidebar  {
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  padding: 15px 0;
+  z-index: 1;
+  background-color: #f7f7f7;
+  border-right: 1px solid #c7c7c7;
+  width: 60px;
+  height: 100%;
+}
+
+.sidebar .logo img {
+  width: 50px;
+}
+
+.dashboard  {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 60px;
+  overflow-y: auto;
+  padding: 20px 35px;
+  min-width: 980px;
+}
+
+h3.dashboard-title {
+  font-weight: 100;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+table {
+  width: 100%;
+
+}
+
+table thead {
+  background-color: #f7f7f7;
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+table th {
+  padding: 10px;
+  font-weight: 500;
+  text-align: left;
+  color: #777;
+}
+
+table td {
+  padding: 10px;
+}
+
+#terminal  {
+  background-color: #333333;
+  width: 100%;
+  color: white;
+  height: 500px;
+  overflow-y: scroll;
+  padding: 15px;
+  color: #F7F7F7;
+}
+
+#terminal .input {
+  height:         1em;
+  min-width:      1em;
+  outline: none;
+  outline-color:  transparent;
+  border:         none;
+  display:        inline-block;
+}
+
+.prompt {
+  color: #2ECC71;
+}
+
+.cyan {
+  color: #00ADEF;
+}

@@ -7,6 +7,15 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+
+  // List of devices
+  this.route('devices', {}); // /devices
+
+  this.route('device', { path: '/device/:device_id' });
+
+  this.route('console', {}); // /devices
+
+
 });
 
 export default Router;

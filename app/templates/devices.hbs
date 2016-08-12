@@ -1,0 +1,32 @@
+{{outlet}}
+
+<h3 class='dashboard-title'>{{ title }}</h3>
+
+<section id=devices class='device-list'>
+  <div class='approved-devices'>
+
+    <table class='devices-table table-hover'>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Last Connection</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |device|}}
+          <!-- <tr> -->
+          {{#link-to 'device' device tagName='tr' }}
+            <td>{{device.id}}</td>
+            <td>{{ format-product-id device.product_id }}</td>
+            <td>{{device.name}}</td>
+            <td>{{device.last_heard}}</td>
+          {{/link-to}}
+          <!-- </tr> -->
+        {{/each}}
+      </tbody>
+    </table>
+
+  </div>
+</section>
