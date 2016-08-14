@@ -2,6 +2,8 @@
 
 <h3 class='dashboard-title'>{{#link-to 'devices'}}Devices{{/link-to}} / {{ model.id }}</h3>
 
+{{m}}
+
 <section id=devices class='device-list'>
   <div class='approved-devices'>
 
@@ -12,6 +14,11 @@
           <th>Type</th>
           <th>Name</th>
           <th>Last Connection</th>
+          <th>Last IP Address</th>
+          <th>Cellular</th>
+          <th>Connected</th>
+          <th>Functions</th>
+          <th>Variables</th>
         </tr>
       </thead>
       <tbody>
@@ -19,6 +26,11 @@
         <td>{{ format-product-id model.product_id }}</td>
         <td>{{model.name}}</td>
         <td>{{model.last_heard}}</td>
+        <td>{{model.last_ip_address}}</td>
+        <td>{{model.cellular}}</td>
+        <td>{{model.connected}}</td>
+        <td>{{model.functions}}</td>
+        <td>{{ format-variables model.variables}}</td>
       </tbody>
     </table>
 

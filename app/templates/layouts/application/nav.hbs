@@ -5,7 +5,10 @@
   <div class='links'>
     {{#link-to 'devices'}}
       <div class="tooltip-item logs-icon">
-        <i class='im-devices-icon'></i>
+        <span class="hint--right hint--info" aria-label="Devices">
+          <i class='im-devices-icon'></i>
+        </span>
+
         <!-- <div class="tooltip">
           <p>Console</p>
         </div> -->
@@ -13,7 +16,9 @@
     {{/link-to}}
     {{#link-to 'console'}}
       <div class="tooltip-item logs-icon">
-        <i class="icon-terminal"></i>
+        <span class="hint--right hint--info" aria-label="Console">
+          <i class="icon-terminal"></i>
+        </span>
         <!-- <div class="tooltip">
           <p>Console</p>
         </div> -->

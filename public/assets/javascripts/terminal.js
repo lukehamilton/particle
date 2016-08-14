@@ -101,6 +101,23 @@ var Terminal = (function() {
         });
 
         elem.addEventListener("keypress", function(event) {
+
+            if (event.which == 13)  {
+              var text = $(event.target).text()
+              commands = ['help', 'devices', 'details', 'functions', 'execute', 'variables', 'value', 'signal']
+              if (commands.indexOf(text.replace(/\s/g, '')) == -1) {
+                // console.log('text', text);
+                // console.log('not in array');
+                window.resetPromptOverride()
+              } else {
+                console.log('text', text);
+                console.log('in array');
+              }
+            } else {
+              console.log('did not hit enter');
+            }
+
+
             var prompt = event.target;
             if(event.keyCode != 13) return false;
 
