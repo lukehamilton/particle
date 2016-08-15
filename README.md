@@ -78,9 +78,22 @@ The Console  on the `/console` route has the following commands:
 I know one of the products particle.io makes is the web based IDE. With that in mind, I thought it would be cool to create
 a terminal emulator to enter SDK commands into.
 
+## Notes on Architecture
+
+I decided to wrap the Particle JavaScript SDK with an Ember service to call the endpoints.
+
 ## Notes on Styling
 
-I did my best to adhere to the style guide. Only after finishing the project did I see there are downloadable
+I did my best to adhere to the style guide. Only after finishing the project did I see there are downloadable stylesheets.
 
+I used the style guide colors and fonts. Additionally I tried to style the devices section based on the Particle.io console web application.
 
-brief notes about your process, what you learned, what was easy and what was difficult, as well as any questions.
+## Areas of Improvement
+
+These are areas that need improvement but I wanted to stick as close to the 2 hour allotted time as possible.
+
+- The console part of the application needs additional error handling. I am aware there are issues with certain arguments for commands.
+
+- The console code in the route file really should be refactored into an Ember component.
+
+- The design is currently not responsive.

@@ -7,3 +7,16 @@
     <span contenteditable="true" class="input"></span>
   </p>
 </div>
+
+<h3>Suggestions</h3>
+
+<ul>
+  <li>help - lists the available console commands<pre>help</pre></li>
+  <li>devices - lists the available devices<pre>devices</pre></li>
+  <li>details DEVICE_ID - lists the details of a device<pre>details 2a002c000a47343232363230</pre></li>
+  <li>functions DEVICE_ID - lists the functions a device can execute<pre>functions 2a002c000a47343232363230</pre></li>
+  <li>execute FUNCTION DEVICE_ID - execute a function on a device and returns a value<pre>execute len 2a002c000a47343232363230</pre></li>
+  <li>variables DEVICE_ID - lists the variables a device stores<pre>variables 2a002c000a47343232363230</pre></li>
+  <li>value VARIABLE DEVICE_ID - retrieves the value of a variable stored on a device<pre>value rssi 2a002c000a47343232363230</pre></li>
+  <li>signal SIGNAL DEVICE_ID - Send a signal to the device to shout rainbows<br/><pre>signal true 2a002c000a47343232363230</pre></li>
+</ul>
